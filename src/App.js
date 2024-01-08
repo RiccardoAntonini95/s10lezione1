@@ -22,7 +22,6 @@ class App extends Component {
     this.setState({
       selectedAsin : singleAsin
     })
-    console.log("l'asin è:", this.state.selectedAsin)
   }
 
   render(){

@@ -34,6 +34,7 @@ class CommentArea extends Component {
         }
       )
       console.log(response)
+      console.log("l'asin dalla fetch è:", this.props.asin)
       if (response.ok) {
         let comments = await response.json()
         this.setState({ comments: comments, isLoading: false, isError: false })

@@ -10,8 +10,7 @@ class SingleBook extends Component {
     return (
       <>
         <Card
-          /* onClick={() => this.setState({ selected: !this.state.selected })} */
-          onClick={() => this.props.getSingleAsin(`${this.props.book.asin}`)}
+          onClick={() => {this.props.getSingleAsin(`${this.props.book.asin}`); this.setState({ selected: !this.state.selected })}}
           style={{ border: this.state.selected ? '3px solid red' : 'none' }}
         >
           <Card.Img variant="top" src={this.props.book.img} />
@@ -21,7 +20,6 @@ class SingleBook extends Component {
             </Card.Title>
           </Card.Body>
         </Card>
-        {/* {this.state.selected && <CommentArea asin={this.props.book.asin} />} */}
       </>
     )
   }
